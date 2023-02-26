@@ -6,7 +6,7 @@
 	4. Automatic Deployment
 		i. click on auto deployment button
 		ii. get the webhook url -  https://webhooks.hostinger.com/deploy/***************
-		iii. now go to github page - https://github.com/dontKnew/local-to-hosting/settings/hooks/new
+		iii. now go to github page - https://github.com/<user>/<repositary>/settings/hooks/new
 			=> Payload url -  webhook url of hostinger (step 4 > ii)
 			=> Secrete  - (leave blank)
 			=> click to Add webhook buton

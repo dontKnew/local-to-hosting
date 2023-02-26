@@ -1,0 +1,18 @@
+=> PUBLIC REPOSITARY
+
+	1. GO TO GIT IN CPANEL
+	2. now create a repositary 
+	3. Manual Deploy 
+		i. Click Manage button 
+		ii. now click button UPATE FROM REMOTE 
+		iii. file has been deplyed from github to hosting server
+	4. Automatic Deployment
+		i. click on auto deployment button
+		ii. get the webhook url -  https://webhooks.hostinger.com/deploy/***************
+		iii. now go to github page - https://github.com/<user>/<repositary>/settings/hooks/new
+			=> Payload url -  webhook url of hostinger (step 4 > ii)
+			=> Secrete  - (leave blank)
+			=> click to Add webhook buton
+
+	5. Now You are setup auto deployment :)
+	6. just push your project  from localhost to github, now github will receive event from hostinger and github will push your project to hostinger local folder
