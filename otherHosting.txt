@@ -1,3 +1,5 @@
+
+https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-deployment/
 => PUBLIC REPOSITARY
 
 	1. GO TO GIT IN CPANEL
