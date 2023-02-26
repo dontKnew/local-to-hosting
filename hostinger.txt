@@ -1,0 +1,15 @@
+=> PUBLIC REPOSITARY
+
+	1. GIT - https://hpanel.hostinger.com/hosting/scholaracad.com/advanced/git
+	2. create a repositary with branche which you push to hostinger file
+	3. Manual Deploy - click on deploy button
+	4. Automatic Deployment
+		i. click on auto deployment button
+		ii. get the webhook url -  https://webhooks.hostinger.com/deploy/***************
+		iii. now go to github page - https://github.com/dontKnew/local-to-hosting/settings/hooks/new
+			=> Payload url -  webhook url of hostinger (step 4 > ii)
+			=> Secrete  - (leave blank)
+			=> click to Add webhook buton
+
+	5. Now You are setup auto deployment :)
+	6. just push your project  from localhost to github, now github will receive event from hostinger and github will push your project to hostinger local folder
