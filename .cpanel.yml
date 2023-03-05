@@ -1,5 +1,5 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home4/elect7wk/ramchandraschool.in/test
-    - /bin/cp myfile.txt $DEPLOYPATH
+    - export DEPLOYPATH=/home4/elect7wk/ramchandraschool.in/test/
+    - /bin/cp * $DEPLOYPATH
 
