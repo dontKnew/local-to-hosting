@@ -1,20 +1,32 @@
-
-https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-deployment/
 => PUBLIC REPOSITARY
 
 	1. GO TO GIT IN CPANEL
 	2. now create a repositary 
-	3. Manual Deploy 
-		i. Click Manage button 
-		ii. now click button UPATE FROM REMOTE 
-		iii. file has been deplyed from github to hosting server
-	4. Automatic Deployment
-		i. click on auto deployment button
-		ii. get the webhook url -  https://webhooks.hostinger.com/deploy/***************
-		iii. now go to github page - https://github.com/<user>/<repositary>/settings/hooks/new
-			=> Payload url -  webhook url of hostinger (step 4 > ii)
-			=> Secrete  - (leave blank)
-			=> click to Add webhook buton
+	3. click Manage & then click pull & deply 
+	4. click to update from remport 
+	5. auto deployment coming soon 
 
-	5. Now You are setup auto deployment :)
-	6. just push your project  from localhost to github, now github will receive event from hostinger and github will push your project to hostinger local folder
+=> WITH FTP
+	1. create git repositry 
+	2. go to setting - secrete & varaibale -> action - create variable for ftp_user_name & ftp_password
+	3. go to github repositary -> action -> create workflow yourself 
+	4. Then Paste below code & commit
+	on: push
+	name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD}} 
+	
+	-> LearnMore - https://github.com/marketplace/actions/ftp-deploy 
+

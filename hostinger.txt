@@ -13,3 +13,4 @@
 
 	5. Now You are setup auto deployment :)
 	6. just push your project  from localhost to github, now github will receive event from hostinger and github will push your project to hostinger local folder
+=> & MAY BE You can use FTP  & for otherHosting.txt file see for more details
